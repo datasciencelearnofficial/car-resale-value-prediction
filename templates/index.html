@@ -1,0 +1,171 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="static/img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Sell Your Car</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="/static/css/linearicons.css">
+			<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+			<link rel="stylesheet" href="/static/css/bootstrap.css">
+			<link rel="stylesheet" href="/static/css/magnific-popup.css">
+			<link rel="stylesheet" href="/static/css/nice-select.css">					
+			<link rel="stylesheet" href="/static/css/animate.min.css">
+			<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">			
+			<link rel="stylesheet" href="/static/css/owl.carousel.css">
+			<link rel="stylesheet" href="/static/css/main.css">
+		</head>
+		<body>
+
+			  <header id="header" id="home">
+			    <div class="container">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+				        <a href="index.html">
+    				        <img src="static/img/logo.png" alt="" title="" />
+				        </a>
+				      </div>
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">
+				<div class="overlay overlay-bg"></div>	
+				<div class="container">
+					<div class="row fullscreen d-flex align-items-center justify-content-center">
+						<div class="banner-content col-lg-7 col-md-6 ">
+							<h6 class="text-white ">Best resale value for your car!</h6>
+							<h1 class="text-white text-uppercase">
+								{{ prediction_text }}
+							</h1>
+							<p class="pt-20 pb-20 text-white">
+								This is the best resale value for selling your used car.
+							</p>
+							<a href="#" class="primary-btn text-uppercase">Get Your Car Now</a>
+						</div>
+						<div class="col-lg-5  col-md-6 header-right">
+							<h4 class="text-white pb-30">Get Best Resale Value!</h4>
+							<form action="{{ url_for('predict')}}" method="post" class="form" role="form" autocomplete="off">
+							    <div class="form-group">
+							       	<div class="default-select" id="default-select"">
+										<select name="Year" required="required">
+											<option value="" disabled selected hidden>Select Year Bought</option>
+											<option value="2005">2005</option>
+											<option value="2006">2006</option>
+											<option value="2007">2007</option>
+											<option value="2008">2008</option>
+											<option value="2009">2009</option>
+											<option value="2010">2010</option>
+											<option value="2011">2011</option>
+											<option value="2012">2012</option>
+											<option value="2013">2013</option>
+											<option value="2014">2014</option>
+											<option value="2015">2015</option>
+											<option value="2016">2016</option>
+											<option value="2017">2017</option>
+											<option value="2018">2018</option>
+											<option value="2019">2019</option>
+											<option value="2020">2020</option>
+										</select>
+									</div>
+							    </div>
+								<div class="from-group">
+							    	<input class="form-control txt-field" type="text" name="Present_Price" placeholder="Enter Price Bought (In Lakhs)" required="required">
+							    </div>
+								<div class="from-group">
+							    	<input class="form-control txt-field" type="text" name="Kms_Driven" placeholder="Enter KMS Driven" required="required">
+							    </div>
+								<div class="form-group">
+							       	<div class="default-select" id="default-select"">
+										<select name="Owner" required="required">
+											<option value="" disabled selected hidden>Number of previous owners</option>
+											<option value="0">0</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+							    </div>
+							    <div class="form-group row">
+							        <div class="col-md-6 wrap-left">
+								       	<div class="default-select" id="default-select"">
+											<select name="Fuel_Type_Petrol" required="required">
+												<option value="" disabled selected hidden>Fuel Type</option>
+												<option value="Petrol">Petrol</option>
+												<option value="Diesel">Diesel</option>
+												<option value="CNG">CNG</option>
+											</select>
+										</div>
+							        </div>
+							        <div class="col-md-6 wrap-right">
+										<div class="default-select" id="default-select"">
+											<select name="Transmission_Manual" required="required">
+												<option value="" disabled selected hidden>Transmission Type</option>
+												<option value="Manual">Manual</option>
+												<option value="Automatic">Automatic</option>
+											</select>
+										</div>
+							        </div>
+							    </div>							    
+							    <div class="from-group">
+							    	<div class="default-select" id="default-select"">
+										<select name="Seller_Type_Individual" required="required">
+											<option value="" disabled selected hidden>Are you A Dealer</option>
+											<option value="Dealer">Dealer</option>
+											<option value="Individual">Individual</option>
+										</select>
+									</div>
+							    </div>
+								<br/>
+							    <div class="form-group row">
+							        <div class="col-md-12">
+							            <button type="submit" class="btn btn-default btn-lg btn-block text-center text-uppercase">Get the Best Value!</button>
+							        </div>
+							    </div>
+							</form>
+						</div>											
+					</div>
+				</div>					
+			</section>
+			<!-- End banner Area -->	
+			
+			<script src="/static/js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="/static/js/vendor/bootstrap.min.js"></script>			
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>			
+  			<script src="/static/js/easing.min.js"></script>			
+			<script src="/static/js/hoverIntent.js"></script>
+			<script src="/static/js/superfish.min.js"></script>	
+			<script src="/static/js/jquery.ajaxchimp.min.js"></script>
+			<script src="/static/js/jquery.magnific-popup.min.js"></script>	
+			<script src="/static/js/owl.carousel.min.js"></script>			
+			<script src="/static/js/jquery.sticky.js"></script>
+			<script src="/static/js/jquery.nice-select.min.js"></script>	
+			<script src="/static/js/waypoints.min.js"></script>
+			<script src="/static/js/jquery.counterup.min.js"></script>					
+			<script src="/static/js/parallax.min.js"></script>		
+			<script src="/static/js/mail-script.js"></script>	
+			<script src="/static/js/main.js"></script>	
+		</body>
+	</html>
+
+
+
